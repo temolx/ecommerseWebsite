@@ -1,0 +1,666 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  height: 210px;
+}
+
+.logo {
+  padding: 60px;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 120px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+
+ul {
+  display: flex;
+  line-height: 240px;
+  margin-right: 120px;
+}
+
+ul li {
+  margin-right: 30px;
+  font-size: 17px;
+  list-style: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #28a7ff;
+}
+
+.currentPage {
+  color: #28a7ff;
+}
+
+ul li:nth-of-type(5) {
+  line-height: 255px;
+  margin-right: 12px;
+}
+
+.logIcon {
+  width: 25px;
+}
+
+.burgerMenu {
+  display: none;
+}
+
+.burgerMenu img {
+  width: 35px;
+  height: 45px;
+  margin: 90px 75px;
+  cursor: pointer;
+}
+
+.mobileMenu {
+  background: white;
+  display: none;
+}
+
+.mobileMenu ul {
+  display: block;
+  line-height: 220px;
+  margin: -10px 0px 0px 0px;
+}
+
+.mobileMenu ul li {
+  line-height: 100px;
+  margin: 0;
+  text-align: center;
+}
+
+.mobileMenu ul li:nth-of-type(1) {
+  margin-top: 35px;
+}
+
+.mobileMenu ul li:nth-of-type(5) {
+  margin-right: 10px;
+  margin-bottom: -60px;
+}
+
+.mobileMenu ul li:nth-of-type(6) {
+  visibility: hidden;
+}
+
+.mainPage {
+  position: relative;
+  background-image: url("/images/house-architecture-modern.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 1000px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+@keyframes fadeAnimationFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(55px);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+.mainPage::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.mainPage h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 55px;
+  text-shadow: 2px 3px 35px black;
+  margin-bottom: 10px;
+  animation: fadeAnimationFromLeft 2s;
+}
+
+.mainPage button {
+  animation: fadeAnimationFromRight 2s;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: black;
+  padding: 7px 18px;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  color: black;
+  background-color: white;
+}
+
+.mainText {
+  margin: 0px 10px;
+  z-index: 99;
+}
+
+footer {
+  display: flex;
+  padding: 60px 100px;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+footer .leftText h1 {
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+footer .leftText p {
+  margin-bottom: 10px;
+}
+
+footer .leftText p:last-child {
+  margin-top: 40px;
+}
+
+.rightForm form input {
+  display: block;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 35px;
+}
+
+.submitButton {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  outline: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  transition: 0.4s ease-in-out;
+}
+
+.submitButton:hover {
+  background-color: #28a7ff;
+}
+
+.rightForm form textarea {
+  resize: none;
+  width: 300px;
+  height: 100px;
+}
+
+form input {
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+textarea {
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footerIcons {
+  margin: 0px 50px;
+}
+
+.footerIcons img {
+  width: 25px;
+  margin-right: 15px;
+  padding-top: 250px;
+  cursor: pointer;
+}
+
+/* CSS FOR ABOUT PAGE */
+
+.aboutInfo {
+  position: relative;
+  background-image: url(images/modern-house-despang-schlpmann-architekten-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 1000px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.aboutInfo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeAnimationFromLeft {
+  0% {
+    transform: translateX(-55px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+.aboutInfo h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+  z-index: 99;
+  animation: fadeAnimationFromLeft 2s;
+}
+
+.aboutInfo h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  z-index: 99;
+  animation: fadeAnimationFromRight 2s;
+}
+
+.iconSection {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.iconSection img {
+  width: 110px;
+  margin-bottom: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.iconSection img:hover {
+  transform: translateY(-25px);
+  cursor: pointer;
+}
+
+.iconBundle {
+  display: block;
+  text-align: center;
+  margin: 0 15px;
+}
+
+.iconBundle h2 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.aboutTeam {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  background: linear-gradient(
+    90deg,
+    rgba(108, 195, 255, 1) 0%,
+    rgba(148, 211, 255, 1) 35%,
+    rgba(40, 167, 255, 1) 100%
+  );
+}
+
+.aboutTeam img {
+  object-fit: cover;
+  width: 50%;
+  margin-right: 80px;
+}
+
+.teamText {
+  margin-top: 220px;
+  margin-bottom: 120px;
+}
+
+.aboutTeam h1 {
+  font-weight: 300;
+  font-size: 35px;
+  margin-right: 50px;
+}
+
+.aboutTeam p {
+  font-weight: 300;
+  font-size: 18px;
+  margin-right: 70px;
+  margin-top: 10px;
+  line-height: 28px;
+}
+
+.aboutTeam button {
+  margin-top: 30px;
+  margin-bottom: 130px;
+}
+
+/* CSS FOR CATALOGUE PAGE */
+
+@keyframes galleryAnimation {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+
+  100% {
+    opacity: 100%;
+    filter: blur(0);
+  }
+}
+
+.catalogue {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background: url(images/plantBG.jpeg) no-repeat;
+  background-size: cover;
+}
+
+.gallery {
+  display: block;
+  padding-top: 94px;
+}
+
+.gallery img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  box-shadow: 9px 10px 18px -8px rgba(138, 67, 67, 0.3);
+  border-radius: 15%;
+}
+
+.galleryImage {
+  transition: 0.3s ease-in-out;
+}
+
+.galleryImage:hover {
+  filter: brightness(1.2);
+}
+
+.gallery .galleryImage:nth-child(1) {
+  animation: galleryAnimation 2s;
+}
+
+.gallery .galleryImage:nth-child(2) {
+  animation: galleryAnimation 3s;
+}
+
+.gallery .galleryImage:nth-child(3) {
+  animation: galleryAnimation 4s;
+}
+
+.gallery .galleryImage:nth-child(4) {
+  animation: galleryAnimation 5s;
+}
+
+.mainImage img {
+  width: 800px;
+  height: 800px;
+  margin: 90px 0 100px 40px;
+  box-shadow: 9px 10px 18px -18px black;
+  animation: galleryAnimation 1s;
+  border-radius: 5%;
+}
+
+/* CSS FOR CONTACT PAGE */
+
+.mainSectionContact {
+  position: relative;
+  background: url(/images/formImage2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#contact-form {
+  width: 100%;
+  height: 1000px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.mainSectionContact::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#contact-form form {
+  margin-top: 200px;
+  z-index: 99;
+}
+
+#contact-form form input {
+  width: 400px;
+  height: 40px;
+}
+
+#contact-form form textarea {
+  width: 400px;
+}
+
+#contact-form form h1 {
+  color: color;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 35px;
+  margin-bottom: 30px;
+  text-shadow: 5px 3px 40px black;
+}
+
+#contact-form form p {
+  margin-top: 30px;
+  color: white;
+  font-weight: 300;
+  font-size: 17px;
+  text-shadow: 5px 3px 20px black;
+  animation: fadeAnimationFromLeft 2s;
+}
+
+#contact-form form p:nth-of-type(2) {
+  animation: fadeAnimationFromRight 2s;
+}
+
+#contact-form form p:nth-of-type(1) {
+  margin-top: 110px;
+}
+
+/* CSS FOR RESPONSIVENESS (MEDIA QUERIES) */
+
+@media screen and (max-width: 960px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+  }
+
+  .rightForm {
+    margin-bottom: 40px;
+  }
+
+  .rightForm input {
+    margin: auto;
+  }
+
+  .leftText {
+    margin-bottom: -200px;
+    margin-top: 60px;
+  }
+
+  .footerIcons {
+    margin-bottom: 35px;
+  }
+
+  .aboutTeam {
+    align-items: flex-start;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .aboutTeam img {
+    width: 110%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .aboutTeam h1 {
+    margin-top: -140px;
+    margin-right: 0;
+  }
+
+  .aboutTeam p {
+    margin-right: 0;
+  }
+
+  .teamText {
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+
+  .teamText button {
+    margin-bottom: 70px;
+  }
+
+  .mainSectionContact {
+    margin-bottom: -40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .iconSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .iconBundle:nth-of-type(1) {
+    margin-bottom: 80px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .burgerMenu {
+    display: contents;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .mobileMenu ul {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .catalogue {
+    display: block;
+  }
+
+  .gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .gallery img {
+    margin-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 25px;
+  }
+
+  .mainImage img {
+    width: 550px;
+    height: 450px;
+    margin: 0 0 50px 0;
+  }
+}
+
+/* Log in & Register */
+
+.logText {
+  font-weight: 400;
+}
+.logRegisterBody {
+  text-align: center;
+}
+
+.LogInForm {
+  display: inline-block;
+}
+
+.LogInForm input {
+  display: block;
+  margin-bottom: 20px;
+  width: 300px;
+  height: 35px;
+}
+
+.LogInForm h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 35px;
+}
+
+.LogInForm h3 {
+  font-weight: 300;
+  text-align: center;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.logoForm img {
+  width: 200px;
+  display: block;
+  margin: 70px auto;
+  transition: 0.3s ease-in-out;
+}
+
+.logoForm img:hover {
+  transform: scale(1.1);
+}
